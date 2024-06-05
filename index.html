@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity or Resource</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chatbot/chatstyle.css">
+</head>
+
+<body>
+    <div class="modal">
+        <div class="modal-header">
+            <h2>Thêm hoạt động hoặc tài nguyên</h2>
+        </div>
+        <div class="modal-body">
+            <div class="activities">
+                <div class="section">
+                    <h3 class="section-title" data-target="activity-list">HOẠT ĐỘNG</h3>
+                    <ul id="activity-list" class="radio-list">
+                        <li><input type="radio" name="activity" id="assignment" data-content="content-assignment"
+                                data-label="Assignment"
+                                data-note-content="Thường được sử dụng trong phần Luyện tập – Vận dụng, Kiểm tra – Đánh giá."><label
+                                for="assignment">Assignment (Bài Tập)</label>
+                        </li>
+                        <li><input type="radio" name="activity" id="attendance" data-content="content-attendance"
+                                data-label="Attendance"
+                                data-note-content="Thường được sử dụng trong phần Luyện tập – Vận dụng, Kiểm tra – Đánh giá."><label
+                                for="attendance">Attendance (Điểm Danh)</label></li>
+                        <li><input type="radio" name="activity" id="attendance-register"
+                                data-content="content-attendance-register" data-label="Attendance Register"
+                                data-note-content="Thường được sử dụng trong phần Luyện tập – Vận dụng, Kiểm tra – Đánh giá."><label
+                                for="attendance-register">Attendance Register (Sổ Điểm Danh)</label></li>
+                        <li><input type="radio" name="activity" id="lesson" data-content="content-lesson"
+                                data-label="Lesson"
+                                data-note-content="Thường được sử dụng trong phần Nội dung khóa học hay bài giảng."><label
+                                for="lesson">Lesson (Bài Học)</label></li>
+                        <li><input type="radio" name="activity" id="glossary" data-content="content-glossary"
+                                data-label="Glossary"
+                                data-note-content="Thường được sử dụng trong phần Nội dung khóa học hay bài giảng."><label
+                                for="board">Glossary (Bảng Từ)</label></li>
+                        <li><input type="radio" name="activity" id="bigbluebutton" data-content="content-bigbluebutton"
+                                data-label="BigBlueButton"
+                                data-note-content="Thường được sử dụng trong phần Tương tác giữa nhà giáo và học viên."><label
+                                for="bigbluebutton">BigBlueButton</label></li>
+                        <li><input type="radio" name="activity" id="choice" data-content="content-choice"
+                                data-label="Choice"
+                                data-note-content="Thường được sử dụng trong phần Luyện tập – Vận dụng, Kiểm tra – Đánh giá."><label
+                                for="choice">Choice (Câu Hỏi Thăm Dò)</label></li>
+                        <li><input type="radio" name="activity" id="database" data-content="content-database"
+                                data-label="Database"
+                                data-note-content="Thường được sử dụng trong phần Luyện tập – Vận dụng, Kiểm tra – Đánh giá."><label
+                                for="database">Database (Cơ Sở Dữ Liệu)</label></li>
+                        <li><input type="radio" name="activity" id="survey" data-content="content-survey"
+                                data-label="Survey"
+                                data-note-content="Thường được sử dụng trong phần Nội dung khóa học hay bài giảng, Tài liệu tham khảo."><label
+                                for="survey">Survey (Cuộc Khảo Sát)</label></li>
+                        <li><input type="radio" name="activity" id="custom-certificate"
+                                data-content="content-custom-certificate" data-label="Custom Certificate"
+                                data-note-content="Thường được sử dụng trong phần Luyện tập – Vận dụng, Kiểm tra – Đánh giá."><label
+                                for="custom-certificate">Custom Certificate (Chứng Chỉ Tùy Chỉnh)</label></li>
+                        <li><input type="radio" name="activity" id="forum" data-content="content-forum"
+                                data-label="Forum"
+                                data-note-content="Thường được sử dụng trong phần Tương tác giữa nhà giáo và học viên."><label
+                                for="forum">Forum (Diễn Đàn)</label></li>
+                        <li><input type="radio" name="activity" id="quiz" data-content="content-quiz" data-label="Quiz"
+                                data-note-content="Thường được sử dụng trong phần Luyện tập – Vận dụng, Kiểm tra – Đánh giá."><label
+                                for="quiz">Quiz (Đề Thi)</label></li>
+                        <li><input type="radio" name="activity" id="external-tool" data-content="content-external-tool"
+                                data-label="External tool"
+                                data-note-content="Thường được sử dụng linh hoạt giữa các phần."><label
+                                for="external-tool">External tool (Công Cụ Bên
+                                Ngoài)</label></li>
+                        <li><input type="radio" name="activity" id="feedback" data-content="content-feedback"
+                                data-label="Feedback"
+                                data-note-content="Thường được sử dụng trong phần Luyện tập – Vận dụng, Kiểm tra – Đánh giá."><label
+                                for="feedback">Feedback (Phản Hồi)</label></li>
+                        <li><input type="radio" name="activity" id="scorm" data-content="content-scorm"
+                                data-label="SCORM"
+                                data-note-content="Thường được sử dụng linh hoạt giữa các phần."><label
+                                for="scorm">SCORM</label></li>
+                        <li><input type="radio" name="activity" id="h5p" data-content="content-h5p" data-label="H5P"
+                                data-note-content="Thường được sử dụng linh hoạt giữa các phần."><label
+                                for="h5p">H5P</label></li>
+                        <li><input type="radio" name="activity" id="jitsi" data-content="content-jitsi"
+                                data-label="Jitsi"
+                                data-note-content="Thường được sử dụng linh hoạt giữa các phần."><label
+                                for="jitsi">Jitsi</label></li>
+                        <li><input type="radio" name="activity" id="chat" data-content="content-chat" data-label="Chat"
+                                data-note-content="Thường được sử dụng trong phần Tương tác giữa nhà giáo và học viên."><label
+                                for="chat">Chat (Phòng Họp Trực Tuyến)</label></li>
+                        <li><input type="radio" name="activity" id="workshop" data-content="content-workshop"
+                                data-label="Workshop"
+                                data-note-content="Thường được sử dụng linh hoạt giữa các phần."><label
+                                for="workshop">Workshop (Tập Huấn)</label></li>
+                        <li><input type="radio" name="activity" id="wiki" data-content="content-wiki" data-label="Wiki"
+                                data-note-content="Thường được sử dụng linh hoạt giữa các phần."><label
+                                for="wiki">Wiki</label></li>
+                        <li><input type="radio" name="activity" id="zoom-meeting" data-content="content-zoom-meeting"
+                                data-label="Zoom Meeting"
+                                data-note-content="Thường được sử dụng linh hoạt giữa các phần."><label
+                                for="zoom-meeting">Zoom Meeting</label></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3 class="section-title" data-target="resource-list">TÀI NGUYÊN</h3>
+                    <ul id="resource-list" class="radio-list">
+                        <li><input type="radio" name="activity" id="book" data-content="content-book" data-label="Book"
+                                data-note-content="Thường được sử dụng trong phần Nội dung khóa học hay bài giảng."><label
+                                for="book">Book</label></li>
+                        <li><input type="radio" name="activity" id="file" data-content="content-file" data-label="File"
+                                data-note-content="Thường được sử dụng linh hoạt giữa các phần."><label
+                                for="file">File</label></li>
+                        <li><input type="radio" name="activity" id="folder" data-content="content-folder"
+                                data-label="Folder"
+                                data-note-content="Thường được sử dụng linh hoạt giữa các phần."><label
+                                for="folder">Folder</label></li>
+                        <li><input type="radio" name="activity" id="google-meet" data-content="content-google-meet"
+                                data-label="Google Meet"
+                                data-note-content="Thường được sử dụng linh hoạt giữa các phần."><label
+                                for="google-meet">Google Meet</label></li>
+                        <li><input type="radio" name="activity" id="ims-content-package"
+                                data-content="content-ims-content-package" data-label="IMS Content Package"
+                                data-note-content="Thường được sử dụng linh hoạt giữa các phần."><label
+                                for="ims-content-package">IMS Content Package</label></li>
+                        <li><input type="radio" name="activity" id="label" data-content="content-label"
+                                data-label="Label"
+                                data-note-content="Thường được sử dụng linh hoạt giữa các phần."><label
+                                for="label">Label</label></li>
+                        <li><input type="radio" name="activity" id="page" data-content="content-page" data-label="Page"
+                                data-note-content="Thường được sử dụng linh hoạt giữa các phần."><label
+                                for="page">Page</label></li>
+                        <li><input type="radio" name="activity" id="url" data-content="content-url" data-label="URL"
+                                data-note-content="Thường được sử dụng linh hoạt giữa các phần."><label
+                                for="url">URL</label></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3 class="section-title" data-target="code-list">THIẾT KẾ NỘI DUNG TRANG</h3>
+                    <ul id="code-list" class="radio-list">
+                        <li><input type="radio" name="activity" id="built-in" data-content="content-built-in"
+                                data-label="Built-in"
+                                data-note-content="Sử dụng tương tự các trình soạn thảo MS Word, Notepad."><label
+                                for="built-in">Sẵn có</label></li>
+                        <li><input type="radio" name="activity" id="html" data-content="content-html" data-label="HTML"
+                                data-note-content="Cần kiến thức về HTML và CSS."><label for="html">HTML</label></li>
+                    </ul>
+                    <div id="chatbot-icon" onclick="toggleChatbot()">💬</div>
+                    <div id="chatbot-container">
+                        <div id="chatbot" class="minimized">
+                            <div class="header">
+                                <span>eLeaningBot</span>
+                                <button>X</button>
+                            </div>
+                            <div class="messagesContainer" id="messagesContainer"></div>
+                            <div class="inputContainer">
+                                <input type="text" id="userInput" placeholder="Bạn cần giúp gì?">
+                                <button id="sendButton">Trợ giúp</button>
+                            </div>
+                            <div id="loading" class="loading">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="description">
+                <div id="content" class="content">
+                    <p><b>Một bài giảng trên nền tảng eLearning (tạm gọi tắt là bài giảng số)</b> bao gồm các thành phần
+                        cơ bản:
+                    </p>
+                    <ul>
+                        <li><b>Giới thiệu khóa học hay bài giảng:</b> Đặt vấn đề, mô tả mục tiêu, đề cương và hướng
+                            dẫn
+                            học (khai thác) bài giảng.
+                        <li><b>Nội dung khóa học hay bài giảng:</b> Lý thuyết liên quan, quy trình thực hành và
+                            hướng
+                            dẫn
+                            mẫu quy trình thực hành.
+                        <li><b>Luyện tập – Vận dụng:</b> Hệ thống câu hỏi ôn tập, bài tập vận dụng và những minh họa
+                            vận
+                            dụng nội dung học tập vào thực tiễn (nếu có).
+                        <li><b>Kiểm tra – Đánh giá:</b> Hệ thống câu hỏi, bài tập kiểm tra kết quả học tập của học viên
+                            được áp dụng trong bài giảng.
+                        <li><b>Tương tác giữa nhà giáo và học viên:</b> Học viên phản hồi thông tin liên quan đến
+                            hoạt
+                            động học; nhà giáo phản hồi thông tin, hướng dẫn học tập cho học viên.
+                        <li><b>Tài liệu tham khảo:</b> Hệ thống tài liệu học tập điện tử (văn bản, hình ảnh và
+                            video)
+                            cung cấp cho học viên tham khảo thêm ngoài bài giảng.
+                    </ul>
+                    <p>Các <b>tài nguyên (resources)</b> và <b>hoạt động (activities)</b> là hai loại nội dung chính có
+                        thể được phát
+                        triển trong các khóa học hay bài giảng số.</p>
+
+                    <p>Tài nguyên là những nội dung tĩnh như trang web, liên kết, hình ảnh, tập tin... Tài nguyên được
+                        sử dụng để cung cấp cho học viên những thông tin cần thiết cho nội dung của khóa học hay bài
+                        giảng số.
+                        Hoạt động là các mục tương tác được tạo ra bởi một trong những công cụ Moodle như hoạt động
+                        diễn đàn thảo luận, bài tập,.... Những hoạt động này yêu cầu học viên cung cấp ý kiến của riêng
+                        mình để
+                        tham gia vào quá trình học tập chủ động và độc lập.</p>
+
+                    <p>Dù phục vụ cho các mục đích khác nhau, các hoạt động và tài nguyên đều được phát triển theo cùng
+                        một cách.</p>
+                    <p>Các hoạt động (activities) và tài nguyên (resources) là linh hồn của một khóa học hay một
+                        bài
+                        giảng số. Để thêm các hoạt động
+                        (activities)
+                        hay tài nguyên (resources), tại mỗi vùng (section) hay chủ đề (topic) của khóa học hay bài
+                        giảng, chúng ta chọn <b>Thêm hoạt động hay tài nguyên:</b></p>
+                    <img src="img/home_1.png" class="center">
+                    <p>Một cửa sổ <b>Thêm hoạt động hay tài nguyên</b> xuất hiện:</p>
+                    <img src="img/home_2.png" class="center">
+                    <p>
+                        Các hoạt động và tài nguyên có thể được sử dụng một cách linh hoạt giữa các thành phần tùy
+                        theo
+                        mục
+                        đích, phương pháp (giáo án) giảng dạy của nhà giáo.</p>
+                </div>
+                <div id="content-assignment" class="content">
+                    <p>Assignment (Bài tập) cho phép học viên nộp bài cho nhà giáo để chấm điểm. Công việc có thể là văn
+                        bản được
+                        gõ trực
+                        tuyến hoặc tập tin được tải lên bất kỳ loại nào mà thiết bị của nhà giáo có thể đọc được. Chấm
+                        điểm có
+                        thể là theo tỷ lệ phần trăm đơn giản hoặc theo thang điểm tùy chỉnh, hoặc có thể sử dụng các
+                        tiêu chuẩn
+                        đánh giá phức tạp hơn. học viên có thể nộp bài cá nhân hoặc theo nhóm.
+                    </p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/bsV9Z_O9V2A?si=W33WpTTIRoBJYKq7"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Khi học viên đã nộp bài, nhấp vào bài tập và nhấp vào "Grades".
+                            <li>Cách hiển thị chính xác phụ thuộc vào cài đặt của nhà giáo và quản trị viên.
+                            <li>Tại đây, bài nộp có thể được chú thích (1) và/hoặc tải xuống (2); điểm được nhập (3) và
+                                phản
+                                hồi cá nhân được đưa ra (4). Nhà giáo lưu các thay đổi (5) và chuyển sang học viên tiếp
+                                theo (6).
+                        </ul>
+                        <img src="img/assign01.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Học viên nhấp vào liên kết bài tập và nhấp vào "Add submission" (1).
+                            <li>Tùy thuộc vào cài đặt
+                                của bài tập, họ có thể có một hộp văn bản để nhập bài làm của mình hoặc một khu vực tải
+                                lên
+                                để nộp tập tin (2).
+                            <li>Họ có thể quay lại bài làm của mình và sửa đổi nó, hoặc họ có thể phải nhấp
+                                vào nút nộp để gửi phiên bản cuối cùng không thể thay đổi.
+                        </ul>
+                        <img src="img/assign02.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Assignment (Bài tập) <a
+                            href="https://docs.moodle.org/404/en/Assignment_activity">tại đây</a>.</h3>
+                </div>
+                <div id="content-attendance" class="content" style="display:none;">
+                    <p>Hoạt động Attendance (Điểm Danh) được thiết kế để nhà giáo có thể điểm danh trong lớp, và học
+                        viên có thể xem
+                        bản ghi điểm danh của riêng mình.</p>
+
+                    <p> Nhà giáo có thể đánh dấu trạng thái điểm danh của học viên là "Có mặt" (P), "Vắng mặt" (A), "Đi
+                        muộn" (L)
+                        hoặc "Được phép vắng" (E). Các mô tả trạng thái này có thể được cấu hình, và có thể thêm nhiều
+                        trạng
+                        thái khác. Nhà giáo thêm Điểm danh như một hoạt động của khóa học, sau đó thiết lập các buổi
+                        học mà điểm danh sẽ được theo dõi.</p>
+
+                    <p>Hoạt động Điểm danh có thể tạo báo cáo cho toàn bộ lớp học hoặc cho từng học viên cá nhân. Học
+                        viên cũng có thể xem bản ghi điểm danh của mình nếu hoạt động này không bị ẩn.
+                    </p>
+                    <p> Hoạt động Điểm danh tùy chọn cho phép nhà giáo truy cập nhanh vào chức năng Điểm danh, và cho
+                        phép
+                        học viên truy cập nhanh vào báo cáo tóm tắt về điểm danh của mình.</p>
+                    </p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/4njhOT6zlVM?si=CQ78i9ApOJjt1lPK"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tạo buổi học, thiết lập điểm danh và theo dõi sự tham gia.
+                            <li>Cập nhật điểm danh và xem báo cáo về sự tham gia của Học viên.
+
+                        </ul>
+                        <img src="img/att02_tc.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Attendance (Điểm Danh) <a
+                            href="https://docs.moodle.org/404/en/Attendance_activity">tại đây</a>.</h3>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Truy cập buổi học, thực hiện điểm danh nếu được yêu cầu.
+                        </ul>
+                        <img src="img/att01_st.png" class="center">
+                    </div>
+                </div>
+                <div id="content-attendance-register" class="content" style="display:none;">
+                    <p>Đây là một mô-đun hoạt động để theo dõi thời gian mà học viên (hoặc người dùng khác) đã tham gia
+                        trong một
+                        khóa học hoặc trong một nhóm các khóa học liên quan.</p>
+                    <div class="embed-container"></div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tạo sổ điểm danh, quản lý danh sách học viên và điểm danh.
+                            <li>Xem báo cáo về sự tham gia và hiệu suất của học viên.
+                        </ul>
+                        <img src="img/attRegis_tc.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Kiểm tra sổ điểm danh và xác nhận sự tham gia của mình.
+                        </ul>
+                        <img src="img/attRegis_st.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Attendance Register (Sổ Điểm Danh) <a
+                            href="https://moodle.org/plugins/mod_attendanceregister">tại đây</a>.</h3>
+                </div>
+                <div id="content-lesson" class="content" style="display:none;">
+                    <p>Hoạt động Lesson (Bài Học) cho phép nhà giáo tạo các bài tập "nhánh" trong đó học viên được trình
+                        bày
+                        với nội
+                        dung và sau đó, tùy thuộc vào phản hồi của họ, được chuyển hướng đến các trang cụ thể. Nội dung
+                        có thể
+                        là văn bản hoặc đa phương tiện.</p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/3qBYnPs7Rk4?si=PbZX2qZuKQklCD7e"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tạo bài học có cấu trúc với các phần và câu hỏi khác nhau.
+                            <li>Xem kết quả và tiến triển của học viên.
+
+                        </ul>
+                        <img src="img/lesson_tc.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Tham gia bài học, trả lời câu hỏi và theo dõi tiến triển cá nhân.
+                        </ul>
+                        <img src="img/lesson_st.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Lesson (Bài Học) <a
+                            href="https://docs.moodle.org/404/en/Lesson_activity">tại đây</a>.</h3>
+                </div>
+                <div id="content-glossary" class="content" style="display:none;">
+                    <p>Hoạt động Glossary (Bảng Từ) cho phép học viên tham gia tạo và duy trì một danh sách các định
+                        nghĩa, giống như
+                        một từ điển. Mặc dù có thể được thiết lập và sử dụng chỉ bởi nhà giáo, chức năng chính của nó
+                        là như một bài tập cộng tác. Bộ lọc tự động liên kết của Glossary (Bảng Từ) sẽ làm nổi bật bất
+                        kỳ từ nào
+                        trong khóa học được tìm thấy trong Glossary (Bảng Từ).</p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/_6ckd1JCDIQ?si=V315d7uReChTXMEe"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tạo danh sách từ điển với các thuật ngữ và định nghĩa.
+                            <li>Thúc đẩy sự hiểu biết, cộng tác, tra cứu bảng từ.
+                        </ul>
+                        <img src="img/gloss_tc.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Tra cứu, chỉnh sửa (nếu được phép) các thuật ngữ trong bảng từ.
+                        </ul>
+                        <img src="img/gloss_st.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Glossary (Bảng Từ) <a
+                            href="https://docs.moodle.org/404/en/Glossary_activity">tại đây</a>.</h3>
+                </div>
+                <div id="content-bigbluebutton" class="content" style="display:none;">
+                    <p>BigBlueButton cho phép nhà giáo tạo liên kết từ bên trong Moodle đến các lớp học trực tuyến thời
+                        gian
+                        thực
+                        bằng cách sử dụng BigBlueButton, một hệ thống hội họp trực tuyến mã nguồn mở dành cho giáo dục
+                        từ xa.
+                        Nhà giáo có thể chỉ định thời gian họp, sau đó thời gian này sẽ được thêm vào lịch và các phiên
+                        có thể được ghi lại để xem sau này.</p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/bHawNjjHGdU?si=PV49HO5zbZXwsEnE"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tạo phòng họp, lên lịch buổi hướng dẫn hoặc thảo luận.
+                            <li>Thực hiện buổi học trực tuyến, chia sẻ màn hình và tương tác với học viên.
+                        </ul>
+                        <img src="img/bigblue_tc_01.png" class="center">
+                        <img src="img/bigblue_tc_02.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Tham gia buổi học trực tuyến, thảo luận và hỏi đáp với nhà giáo.
+                        </ul>
+                        <img src="img/bigblue_st_01.png" class="center">
+                        <img src="img/bigblue_st_02.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về BigBlueButton <a
+                            href="https://docs.moodle.org/404/en/BigBlueButton">tại đây</a>.</h3>
+                </div>
+                <div id="content-choice" class="content" style="display:none;">
+                    <p>Hoạt động Choice (Câu Hỏi Thăm Dò) cho phép nhà giáo đặt một câu hỏi và thiết lập các nút radio
+                        mà học viên có thể
+                        nhấp để
+                        chọn từ một số lựa chọn có thể có. Họ có thể chọn một hoặc nhiều tùy chọn và họ có thể cập nhật
+                        lựa chọn
+                        của mình nếu nhà giáo cho phép họ làm điều đó. Choice có thể hữu ích như một cuộc thăm dò nhanh
+                        để
+                        kích
+                        thích suy nghĩ về một chủ đề, để cho lớp bỏ phiếu về định hướng của khóa học, hoặc để đánh giá
+                        tiến
+                        độ.</p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/Uz7agFvftGQ?si=sfPE1nLfOiOzvrNt"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tạo cuộc thăm dò để thu thập ý kiến hoặc quan điểm của học viên.
+                            <li>Xem kết quả và phản hồi từ cuộc thăm dò.
+
+                        </ul>
+                        <img src="img/choice_tc.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Tham gia cuộc thăm dò bằng cách chọn một trong các lựa chọn.
+                        </ul>
+                        <img src="img/choice_st.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Choice (Câu Hỏi Thăm Dò) <a
+                            href="https://docs.moodle.org/404/en/Choice_activity">tại đây</a>.</h3>
+                </div>
+                <div id="content-database" class="content" style="display:none;">
+                    <p>Hoạt động Database (Cơ Sở Dữ Liệu) cho phép nhà giáo và/hoặc học viên xây dựng, hiển thị và tìm
+                        kiếm một
+                        ngân hàng
+                        các mục nhập ghi lại về bất kỳ chủ đề nào có thể có. Định dạng và cấu trúc của các mục nhập này
+                        có thể
+                        gần như không giới hạn, bao gồm hình ảnh, tập tin, URL, số và văn bản trong số những điều khác.
+                    </p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/e53PNZOHTSU?si=GTMp8YqqKLIJ-2VU"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tạo cơ sở dữ liệu để chia sẻ tài nguyên và thông tin.
+                            <li>Quản lý và đánh giá các mục trong cơ sở dữ liệu.
+                        </ul>
+                        <img src="img/data_tc.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Tìm kiếm, xem và đóng góp thông tin vào cơ sở dữ liệu.
+                        </ul>
+                        <img src="img/data_st.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Database (Cơ Sở Dữ Liệu) <a
+                            href="https://docs.moodle.org/404/en/Database_activity">tại đây</a>.</h3>
+                </div>
+                <div id="content-survey" class="content" style="display:none;">
+                    <p>Hoạt động Survey (Cuộc Khảo Sát) cung cấp một số công cụ khảo sát đã được xác minh, bao gồm
+                        COLLES (Khảo sát
+                        Môi trường
+                        Học tập Trực tuyến Xây dựng) và ATTLS (Khảo sát Thái độ đối với Tư duy và Học tập), được cho là
+                        hữu ích
+                        trong việc đánh giá và kích thích quá trình học tập trong môi trường trực tuyến. Nhà giáo có
+                        thể sử
+                        dụng chúng để thu thập dữ liệu từ học viên, giúp họ hiểu về lớp học và phản
+                        ánh về
+                        việc giảng dạy của mình.</p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/jPdn9WPLndw?si=RpouVL_FU0ITrLhi"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tạo bảng khảo sát để đánh giá ý kiến và hiệu suất của học viên.
+                            <li>Phân tích kết quả và áp dụng cải tiến nếu cần.
+                        </ul>
+                        <img src="img/survey_tc.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Tham gia vào bảng khảo sát và chia sẻ ý kiến cá nhân.
+                        </ul>
+                        <img src="img/survey_tc_st.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Survey (Cuộc Khảo Sát) <a
+                            href="https://docs.moodle.org/404/en/Survey_activity">tại đây</a>.</h3>
+                </div>
+                <div id="content-custom-certificate" class="content" style="display:none;">
+                    <p>Hoạt động Custom Certificate (Chứng Chỉ Tùy Chỉnh) cho phép tạo ra các chứng chỉ PDF động với
+                        việc tùy chỉnh hoàn toàn
+                        thông qua
+                        trình duyệt web. Điều này khác biệt so với mô-đun chứng chỉ cần truy cập PHP và FTP để tùy chỉnh
+                        giao
+                        diện của nó.</p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/L42G8eyDMys?si=BtHyykHKJ6rgpa-p"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tạo chứng chỉ tùy chỉnh để khen ngợi và thưởng cho thành tích đặc biệt.
+                            <li>Phát chứng chỉ cho Học viên đạt được tiêu chí nhất định.
+
+                        </ul>
+                        <img src="img/certifi_tc.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Nhận và lưu trữ chứng chỉ điện tử của mình.
+                        </ul>
+                        <img src="img/certifi_st_01.png" class="center">
+                        <img src="img/certifi_st_02.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Custom Certificate (Chứng Chỉ Tùy Chỉnh) <a
+                            href="https://docs.moodle.org/404/en/Custom_certificate_module">tại đây</a>.</h3>
+                </div>
+                <div id="content-forum" class="content" style="display:none;">
+                    <p>Hoạt động Forum (Diễn Đàn) cho phép học viên và nhà giáo trao đổi ý kiến bằng cách đăng nhận xét
+                        như
+                        một phần của 'chuỗi thảo luận'. Các tập tin như hình ảnh và phương tiện có thể được bao gồm
+                        trong
+                        các bài đăng trên diễn đàn. Nhà giáo có thể chọn chấm điểm và/hoặc đánh giá các bài đăng trên
+                        diễn đàn và cũng có thể cấp quyền cho học viên đánh giá bài đăng của nhau.</p>
+                    <div class="embed-container"></div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ztjPPYjdxtI?si=okexcTghii0ICxpv"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tạo diễn đàn để thảo luận và trao đổi ý kiến.
+                            <li>Tham gia vào các cuộc thảo luận và cung cấp hướng dẫn.
+                        </ul>
+                        <img src="img/forum_tc.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Đăng bài, tham gia vào cuộc thảo luận và tương tác với nhà giáo bè hay nhà giáo.
+                        </ul>
+                        <img src="img/forum_st.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Forum (Diễn Đàn) <a
+                            href="https://docs.moodle.org/404/en/Forum_activity">tại đây</a>.</h3>
+                </div>
+                <div id="content-quiz" class="content" style="display:none;">
+                    <p>Hoạt động Quiz (Đề Thi) là một công cụ rất mạnh mẽ có thể đáp ứng nhiều nhu cầu giảng dạy, từ các
+                        bài kiểm tra kiến thức đơn giản với nhiều lựa chọn đến các bài tự đánh giá phức tạp với phản hồi
+                        chi tiết.</p>
+                    <p>Các câu hỏi được tạo ra và lưu trữ riêng biệt trong ngân hàng câu hỏi và có thể được sử dụng lại
+                        trong các bài Quiz (Đề Thi) khác nhau. Khi tạo một bài Quiz (Đề Thi), nhà giáo có thể tạo câu
+                        hỏi trước
+                        và thêm chúng vào bài Quiz (Đề Thi), hoặc thêm hoạt động Quiz (Đề Thi) và tạo câu hỏi
+                        trong quá trình thực hiện.</p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/4bjq_NBtob0?si=KocHsP3P5YiVijnz"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tạo bài kiểm tra với các loại câu hỏi khác nhau.
+                            <li>Xem kết quả tự động và cung cấp phản hồi.
+
+                        </ul>
+                        <img src="img/quiz_tc.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Tham gia vào bài kiểm tra và xem kết quả cá nhân.
+                        </ul>
+                        <img src="img/quiz_st_01.png" class="center">
+                        <img src="img/quiz_st_02.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Quiz (Đề Thi) <a
+                            href="https://docs.moodle.org/404/en/Quiz_activity">tại đây</a>.</h3>
+                </div>
+                <div id="content-external-tool" class="content" style="display:none;">
+                    <p>Hoạt động External tool (Công Cụ Bên Ngoài) là các ứng dụng bổ sung nhà giáo có thể tích hợp vào
+                        khóa
+                        học của mình, chẳng
+                        hạn như nội dung tương tác, hoạt động hoặc đánh giá. Nhà giáo có thể liên kết đến các hoạt động
+                        này từ trang khóa học Moodle của mình, và học viên có thể truy cập chúng mà không cần rời khỏi
+                        khóa học Moodle hoặc đăng nhập vào một hệ thống khác. Nếu có sẵn và tùy thuộc vào từng công cụ,
+                        học viên cũng có thể nhận được điểm số gửi lại vào Moodle.</p>
+
+                    <p>Liên kết giữa Moodle và các công cụ này được thực hiện thông qua tiêu chuẩn Khả năng Tương tác
+                        Công cụ Học tập (LTI - Learning Tools Interoperability), giúp tích hợp các nền tảng học tập với
+                        các công cụ học tập để tạo ra một
+                        trải nghiệm học tập phong phú và liền mạch hơn. Về cơ bản, tiêu chuẩn LTI cho phép trao đổi
+                        thông tin an toàn, hai chiều giữa Moodle và các công cụ học tập bên ngoài.</p>
+
+                    <p> Các công cụ bên ngoài LTI có thể được sử dụng trong Moodle như các hoạt động.</p>
+                    <div class="embed-container"></div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tích hợp công cụ và tài nguyên từ các nguồn bên ngoài.
+                            <li>Hướng dẫn Học viên sử dụng công cụ tích hợp.
+                        </ul>
+
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Truy cập và sử dụng các công cụ tích hợp từ Moodle.
+                        </ul>
+
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về External tool (Công Cụ Bên Ngoài) <a
+                            href="https://docs.moodle.org/404/en/LTI_External_tools">tại đây</a>.</h3>
+                </div>
+                <div id="content-feedback" class="content" style="display:none;">
+                    <p>Hoạt động Feedback (Phản Hồi) cho phép nhà giáo tạo và thực hiện các cuộc khảo sát để thu thập
+                        phản hồi. Không
+                        giống như công cụ Survey (Cuộc Khảo Sát), nó cho phép nhà giáo tự viết câu hỏi của mình, thay vì
+                        chọn từ danh sách
+                        các câu hỏi đã viết sẵn và không giống như công cụ Quiz (Đề Thi), nhà giáo có thể tạo các câu
+                        hỏi không
+                        được chấm điểm. Hoạt động PFeedback (Phản Hồi) lý tưởng cho việc đánh giá khóa học hoặc nhà
+                        giáo.</p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/TIFzMMWKLg0?si=RaahmvK8U3SCsExQ"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tạo biểu mẫu phản hồi để thu thập ý kiến và góp ý từ Học viên.
+                            <li>Xem và phản hồi trực tiếp trên ý kiến của Học viên.
+
+                        </ul>
+                        <img src="img/feedback_tc.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Điền vào biểu mẫu phản hồi và gửi ý kiến cho nhà giáo.
+                        </ul>
+                        <img src="img/feedback_st.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Feedback (Phản Hồi) <a
+                            href="https://docs.moodle.org/404/en/Feedback_activity">tại đây</a>.</h3>
+                </div>
+                <div id="content-scorm" class="content" style="display:none;">
+                    <p>Hoạt động SCORM cho phép nhà giáo tải lên bất kỳ gói SCORM hoặc AICC nào vào một khóa học. SCORM
+                        (Mô hình Tham chiếu Đối tượng Nội dung Có thể Chia sẻ) là một tập hợp các quy định cho
+                        phép khả năng tương tác, khả năng truy cập và tái sử dụng nội dung học tập trên web.</p>
+                    <div class="embed-container">
+
+                    </div>
+                    <div class="activity-teacher">
+
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tích hợp nội dung SCORM từ các nguồn khác nhau.
+                            <li>Đánh giá và theo dõi tiến triển của Học viên trong nội dung SCORM.
+
+
+                        </ul>
+                        <img src="img/scorm_tc.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Truy cập nội dung SCORM từ Moodle và tham gia vào các hoạt động.
+                        </ul>
+                        <img src="img/scorm_st.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về SCORM <a
+                            href="https://docs.moodle.org/404/en/SCORM_activity">tại đây</a>.</h3>
+                </div>
+                <div id="content-h5p" class="content" style="display:none;">
+                    <p>H5P là viết tắt của HTML5 Package. Nó cho phép các nhà giáo tạo nội dung như video tương tác,
+                        câu đố và bài thuyết trình. Nội dung H5P có thể được tạo trong <a
+                            href="https://docs.moodle.org/404/en/Content_bank">Ngân hàng nội dung</a> hoặc trên
+                        trang web <a href="https://h5p.com/">h5p.com</a>, hoặc bằng ứng dụng <a
+                            href="https://lumi.education/en/">LUMI</a> cho máy tính để bàn, và thêm vào khóa học
+                        dưới dạng hoạt động H5P hoặc nhúng vào bất kỳ hoạt động hoặc tài nguyên nào khác.
+
+                        Đối với đánh giá tổng kết, chẳng hạn như các kỳ thi, vì lý do bảo mật, nên sử dụng hoạt động
+                        Quiz (Đề Thi) thay vì H5P.</p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/llt4fqu2oe8?si=84SV-8KUT65M8i5M"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tạo tài nguyên tương tác như video, trò chơi, bài giảng, v.v.
+                            <li>Theo dõi tiến triển và điểm số của học viên trong H5P.
+                        </ul>
+                        <img src="img/h5p_tc.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Truy cập và tương tác với tài nguyên H5P từ Moodle.
+                        </ul>
+                        <img src="img/h5p_01.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về H5P <a
+                            href="https://docs.moodle.org/404/en/H5P_activity">tại
+                            đây</a>.</h3>
+                </div>
+                <div id="content-jitsi" class="content" style="display:none;">
+                    <p>Jitsi cho phép tạo các phiên hội nghị video jitsi-meet tích hợp hoàn toàn trong Moodle. Các
+                        hội nghị video này sẽ sử dụng tên người dùng Moodle của nhà giáo bằng cách hiển thị tên người
+                        dùng và
+                        ảnh đại diện của nhà giáo trong hội nghị video.</p>
+
+                    <p>Jitsi-meet là một giải pháp hội nghị video mã nguồn mở cho phép nhà giáo dễ dàng xây dựng và
+                        triển
+                        khai các giải pháp hội nghị video bảo mật.</p>
+
+                    <p>Dù nhà giáo sử dụng máy chủ công cộng được cung cấp bởi Jitsi (meet.jit.si) hay sử dụng máy chủ
+                        hội
+                        nghị video Jitsi của riêng mình, với plugin này, nhà giáo có thể tạo các phiên hội nghị video
+                        trong
+                        các khóa học Moodle của mình một cách đơn giản: chỉ cần cấu hình tên miền của máy chủ Jitsi và
+                        sau đó, trong khóa học, tạo một hoạt động Jitsi mới.</p>
+
+                    <p>Hoạt động này cũng cho phép sử dụng các token để cấp quyền điều phối cho các vai trò mà nhà giáo
+                        muốn
+                        bằng cách sử dụng khả năng mod/jitsi:moderation. (Để sử dụng tùy chọn này, cần phải có máy chủ
+                        Jitsi riêng của nhà giáo với cấu hình token).</p>
+
+                    <p>Lên lịch các cuộc họp video của nhà giáo và làm cho chúng có thể truy cập được vào thời gian nhà
+                        giáo
+                        muốn. Ngoài ra, phiên họp sẽ được hiển thị trong lịch Moodle.</p>
+
+                    <p>Jitsi cho phép ghi âm hội nghị video, truyền trực tiếp lên YouTube, chia sẻ màn hình, hiển thị
+                        toàn màn hình, hiển thị thống kê, cùng với nhiều tính năng khác và tất cả các tùy chọn này đều
+                        hoàn toàn tương thích với mô-đun này.</p>
+
+                    <p>Thông tin thêm về hội nghị video của Jitsi: <a href="https://jitsi.org/">jitsi.org</a></p>
+                    <div class="embed-container"></div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tạo phòng họp Jitsi để thực hiện buổi hướng dẫn hoặc thảo luận.
+                            <li>Sử dụng tính năng video, âm thanh và chia sẻ màn hình.
+                        </ul>
+
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Tham gia vào phòng họp và tương tác với nhà giáo, bạn bè.
+                        </ul>
+
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Jitsi <a
+                            href="https://docs.moodle.org/404/en/jitsi">tại đây</a>.</h3>
+                </div>
+                <div id="content-chat" class="content" style="display:none;">
+                    <p>Hoạt động Chat (Phòng Họp Trực Tuyến) cho phép những học viên có thể thảo luận đồng bộ theo thời
+                        gian
+                        thực trong một khóa học Moodle. Các chủ đề khác nhau có thể được sử dụng (tuy nhiên lưu ý rằng
+                        bạn sẽ mất chuỗi hội thoại nếu thay đổi chủ đề trong khi trò chuyện) và có một giao diện dễ tiếp
+                        cận.</p>
+                    <div class="embed-container"></div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tạo phòng trò chuyện để giao tiếp và hỗ trợ Học viên.
+                            <li>Tham gia vào các cuộc trò chuyện và giải đáp thắc mắc.
+
+                        </ul>
+                        <img src="img/chat_tc.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Tham gia vào phòng trò chuyện để thảo luận và trao đổi thông tin.
+                        </ul>
+                        <img src="img/chat_st.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Chat (Phòng Họp Trực Tuyến) <a
+                            href="https://docs.moodle.org/404/en/Chat_activity">tại đây</a>.</h3>
+                </div>
+                <div id="content-workshop" class="content" style="display:none;">
+                    <p>Hoạt động Workshop (Tập Huấn) là một công cụ đánh giá đồng đẳng mạnh mẽ. Học viên nộp bài và sau
+                        đó các bài
+                        này được phân phối cho các bạn cùng lớp để đánh giá dựa trên thang điểm do nhà giáo quy định.
+                    </p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/nT_u6lhuitM?si=goUmLAc2SaHk0uwU"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tạo buổi workshop để học viên gửi và đánh giá công việc của bạn cùng khóa học.
+                            <li>Cung cấp phản hồi và theo dõi sự tham gia của học viên.
+
+                        </ul>
+                        <img src="img/workshop_tc.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Tham gia workshop, gửi và đánh giá công việc của nhà giáo.
+                        </ul>
+                        <img src="img/workshop_st.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Workshop (Tập Huấn) <a
+                            href="https://docs.moodle.org/404/en/Workshop_activity">tại đây</a>.</h3>
+                </div>
+                <div id="content-wiki" class="content" style="display:none;">
+                    <p>Hoạt động Wiki cho phép học viên tạo ra một tài liệu cộng tác bằng cách cùng nhau xây dựng các
+                        trang, tương tự như Wikipedia. Không giống như các chương trình chỉnh sửa cộng tác khác (như
+                        Google Docs), Wiki là một hoạt động tiêu chuẩn trong Moodle nên không cần thêm quyền hoặc đăng
+                        nhập khác.</p>
+
+                    <p>Mặc dù Wikis thường là công cụ cộng tác, nhưng cũng có thể cho phép mỗi học viên tạo Wiki riêng
+                        cho mục đích cá nhân.</p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/6sMH3SabSfw?si=lyf4lir1tztmFSfX"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tạo trang wiki để học viên thêm nội dung và chia sẻ thông tin.
+                            <li>Theo dõi và đánh giá sự đóng góp của học viên.
+                        </ul>
+                        <img src="img/wiki_tc.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Thêm nội dung và sửa đổi trang wiki để chia sẻ kiến thức.
+                        </ul>
+                        <img src="img/wiki_st.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Wiki <a
+                            href="https://docs.moodle.org/404/en/Wiki_activity">tại đây</a>.</h3>
+                </div>
+                <div id="content-zoom-meeting" class="content" style="display:none;">
+                    <p>Zoom là dịch vụ hội nghị video dựa trên web và ứng dụng (<a
+                            href="http://zoom.us">http://zoom.us</a>). Plugin này cung cấp sự
+                        tích hợp chặt chẽ với Moodle, hỗ trợ tạo cuộc họp, đồng bộ hóa, chấm điểm, và sao lưu/khôi phục.
+                    </p>
+                    <div class="embed-container"></div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tạo phòng họp Zoom để thực hiện buổi hướng dẫn hoặc thảo luận.
+                            <li>Sử dụng tính năng video, âm thanh và chia sẻ màn hình.
+
+                        </ul>
+
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Tham gia vào phòng họp Zoom từ Moodle và tương tác với nhà giáo.
+                        </ul>
+
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Zoom Meeting <a
+                            href="https://moodle.org/plugins/mod_zoom/v4.0/24983">tại đây</a>.</h3>
+                </div>
+                <div id="content-book" class="content" style="display:none;">
+                    <p>Tài nguyên Book cho phép nhà giáo tạo ra các tài liệu nhiều trang với định dạng giống sách và có
+                        mục lục.
+                        Nội dung đa phương tiện có thể được nhúng vào và sách có thể được in toàn bộ hoặc theo từng
+                        chương.</p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/cXmOaS0B1lg?si=9et1fdhpTzrfC_xV"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tạo sách điện tử với các phần và nội dung cần thiết.
+                            <li>Xem kết quả và tiến triển của học viên trong việc đọc sách.
+
+                        </ul>
+                        <img src="img/book_tc.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Đọc và tương tác với các phần khác nhau trong sách điện tử.
+
+                        </ul>
+                        <img src="img/book_st.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Book <a
+                            href="https://docs.moodle.org/404/en/Book_resource">tại đây</a>.</h3>
+                </div>
+                <div id="content-file" class="content" style="display:none;">
+                    <p>Tài nguyên File không chỉ là các tài liệu soạn thảo văn bản hay các bài thuyết trình dạng trình
+                        chiếu.
+                        Mọi loại tập tin đều có thể được tải lên và truy cập thông qua Moodle, nhưng học viên cần phải
+                        có
+                        phần mềm phù hợp để có thể mở chúng. Các loại tập tin khác nhau được hiển thị với các biểu tượng
+                        khác nhau. Tập tin có thể được thêm vào theo hai cách: chúng có thể được kéo và thả trực tiếp
+                        lên
+                        trang khóa học.</p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/ZhNKxK5Pqj0?si=nYN-8NJcrmOZzFow"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p>Ngoài ra, chúng có thể được thêm vào bằng cách nhấp vào File từ bộ chọn hoạt động</p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/4gL_lctlfsY?si=ttXPQxU33arR2EBP"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tổ chức và chia sẻ nội dung.
+
+                        </ul>
+                        <img src="img/file_tc.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Tổ chức và chia sẻ nội dung.
+
+                        </ul>
+                        <img src="img/file_st.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về File <a
+                            href="https://docs.moodle.org/404/en/File_resource">tại đây</a>.</h3>
+                </div>
+                <div id="content-folder" class="content" style="display:none;">
+                    <p>Tài nguyên Folder cho phép nhà giáo hiển thị nhiều tập tin khóa học cùng nhau. Các tập tin có thể
+                        thuộc
+                        các loại
+                        khác nhau và có thể được tải lên cùng một lúc dưới dạng thư mục nén sau đó được giải nén, hoặc
+                        chúng có thể được thêm từng tập tin một vào thư mục trống trên trang khóa học.</p>
+                    <p>Lưu ý rằng trong Moodle LMS, thư mục chỉ có thể được sử dụng để thu thập và hiển thị tập tin,
+                        không
+                        phải các tài nguyên hoặc hoạt động khác, khác với cách sử dụng thuật ngữ 'thư mục' trong các nền
+                        tảng học tập khác.</p>
+                    <div class="embed-container">
+
+                    </div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Nhà giáo sẽ thấy nút Chỉnh sửa (Edit) khi truy cập vào thư mục, cho phép họ tải lên,
+                                chỉnh sửa
+                                hoặc xóa các tệp tin.
+
+                        </ul>
+                        <img src="img/folder_tc.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Tùy thuộc vào cách nhà giáo cấu hình thư mục, học viên sẽ nhấp vào thư mục để xem các
+                                tập tin hoặc chúng sẽ được hiển thị trên trang khóa học. Nếu nhà giáo bao gồm nút Tải
+                                xuống (Download), học viên sẽ thấy nút này như trong ảnh chụp màn hình
+
+                        </ul>
+                        <img src="img/folder_st.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Folder <a
+                            href="https://docs.moodle.org/404/en/Folder_resource">tại đây</a>.</h3>
+                </div>
+                <div id="content-google-meet" class="content" style="display:none;">
+                    <p>Google Meet cho phép nhà giáo tạo một phòng Google Meet và cung cấp cho học
+                        viên các bản ghi của phòng được lưu trên Google Drive mà không cần phải rời khỏi Moodle.</p>
+                    <img src="img/gmeet.png" class="center">
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tạo phòng họp Google Meet để thực hiện buổi hướng dẫn hoặc thảo luận.
+                            <li>Sử dụng tính năng video, âm thanh và chia sẻ màn hình.
+                        </ul>
+
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Tham gia vào phòng họp Google Meet từ Moodle và tương tác với nhà giáo.
+
+                        </ul>
+
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Google Meet <a
+                            href="https://moodle.org/plugins/mod_googlemeet">tại đây</a>.</h3>
+                </div>
+                <div id="content-ims-content-package" class="content" style="display:none;">
+                    <p>IMS content package là nội dung giúp xác định các tiêu chuẩn kỹ thuật cho nhiều lĩnh vực, bao gồm
+                        cả tài liệu
+                        e-learning. Đặc tả Gói Nội dung IMS (IMS Content Package) cho phép lưu trữ các phần tài liệu
+                        theo định dạng tiêu chuẩn, có thể tái sử dụng trong các hệ thống khác nhau mà không cần phải
+                        chuyển đổi tài liệu sang các định dạng mới.</p>
+
+                    <p>Gói nội dung IMS trong Moodle cho phép tải lên và bao gồm các gói nội dung này trong các khóa
+                        học Moodle. Có nhiều tùy chọn để hiển thị nội dung với menu điều hướng hoặc các nút, v.v. như
+                        hình minh họa sau:</p>
+                    <img src="img/IMSContentP.png" class="center">
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Truy cập và tương tác với nội dung IMS tích hợp từ Moodle.
+
+                        </ul>
+
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Truy cập và tương tác với nội dung IMS tích hợp từ Moodle.
+
+                        </ul>
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về IMS content package <a
+                            href="https://docs.moodle.org/404/en/IMS_content_package">tại đây</a>.</h3>
+                </div>
+                <div id="content-label" class="content" style="display:none;">
+                    <p>Label (còn được biết đến Text and media area) đóng vai trò như một khoảng cách
+                        trên trang bài giảng hay khóa học. Nó có thể được sử dụng để thêm văn bản, hình ảnh, đa phương
+                        tiện
+                        hoặc mã vào giữa các tài nguyên khác nhau trong các phần khác nhau. Đây là một tài nguyên rất
+                        linh hoạt và có thể giúp cải thiện giao diện của khóa học nếu được sử dụng một cách cẩn thận.
+                        Biểu ngữ hoặc mô tả có thể được thêm vào đây để phân biệt và làm nổi bật các khu vực khác nhau.
+                        (Lưu ý rằng việc sử dụng quá nhiều đa phương tiện (âm thanh, video) trong các khu vực Văn bản và
+                        phương tiện có thể làm chậm tốc độ tải trang khóa học.)
+                    </p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/jMdcpGmJiKo?si=G5YYurWnGa899iRF"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tổ chức và chia sẻ nội dung.
+
+                        </ul>
+                        <img src="img/label_tc.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Những gì học viên thấy Label phụ thuộc vào cách nhà giáo đã cấu hình nó. Các khu vực
+                                Label hiển thị như một phần của trang
+                                khóa học, vì vậy không có biểu tượng để nhấp vào.
+
+                        </ul>
+                        <img src="img/label_st.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Label <a
+                            href="https://docs.moodle.org/404/en/Text_and_media_area">tại đây</a>.</h3>
+                </div>
+                <div id="content-page" class="content" style="display:none;">
+                    <p>Tài nguyên Page (trang nội dung) tạo một liên kết đến một màn hình hiển thị nội dung được tạo bởi
+                        nhà giáo.
+                        Trình soạn thảo văn bản cho phép trang hiển thị nhiều loại nội dung khác nhau như văn bản thuần
+                        túy, hình ảnh, âm thanh, video, mã nhúng hoặc kết hợp tất cả những điều này. Các trang dễ truy
+                        cập hơn so với việc tải lên các tài liệu đã xử lý văn bản, đặc biệt là nếu tài liệu chỉ chứa văn
+                        bản để đọc chứ không phải để tải về.</p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/8FPKOIiXwNU?si=KMMVh4LlQEZw4vG5"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Giáo viên có thể chỉnh sửa trang bằng cách nhấp vào Page và sau đó chọn Settings.
+
+                        </ul>
+                        <img src="img/page_tc.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Học viên nhấp vào biểu tượng để xem trang và có thể truy cập vào văn bản hoặc phương
+                                tiện mà nhà giáo đã cung cấp.
+                        </ul>
+                        <img src="img/page_st.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về Page <a
+                            href="https://docs.moodle.org/404/en/Page_resource">tại đây</a>.</h3>
+                </div>
+                <div id="content-url" class="content" style="display:none;">
+                    <p>URL (Uniform or Universal Resource Locator) là một liên kết trên internet tới một trang web hoặc
+                        tập tin trực tuyến. Nhà giáo có thể sử dụng tài nguyên URL để cung cấp cho học viên các liên
+                        kết web phục vụ nghiên cứu, giúp học viên tiết kiệm thời gian và công sức trong việc gõ địa chỉ
+                        một cách thủ công.</p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/EN_LjaymLiw?si=8K_EleuoKC_kls9J"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="activity-teacher">
+                        <h3>Hoạt động nhà giáo:</h3>
+                        <ul>
+                            <li>Tổ chức và chia sẻ nội dung. Nhà giáo có thể chỉnh sửa cài đặt URL (ngay cả khi không
+                                bật chế độ chỉnh sửa) bằng cách nhấp vào liên kết URL và sau đó chọn Cài đặt (Settings).
+
+                        </ul>
+                        <img src="img/URL.png" class="center">
+                    </div>
+                    <div class="activity-student">
+                        <h3>Hoạt động học viên:</h3>
+                        <ul>
+                            <li>Học viên nhấp vào biểu tượng để xem trang web hoặc tập tin được tải lên từ bên ngoài,
+                                kèm theo mô tả nếu có. Cách hiển thị phụ thuộc vào cài đặt của nhà giáo trong phần Giao
+                                diện (Appearance) và cài đặt (Settings) của trang web.
+                        </ul>
+                        <img src="img/URL.png" class="center">
+                    </div>
+                    <h3 style="margin: top 10px;">Tìm hiểu thêm về URL <a
+                            href="https://docs.moodle.org/404/en/URL_resource">tại đây</a>.</h3>
+                </div>
+                <div id="content-built-in" class="content" style="display:none;">
+                    <p>Hệ thống eLearning cung cấp trình soạn thảo cho phép nhà giáo biên soạn, thiết kế nội dung trang
+                        nhanh chóng, dễ dàng. Giao diện mặc định trình soạn thảo:</p>
+                    <img src="img/built01.png" class="center">
+                    <p>Nhấn nút mũi tên hướng xuống (góc trái) để mở rộng trình soạn thảo:</p>
+                    <img src="img/built02.png" class="center">
+                    <p>Một danh sách các nút tính năng cho phép nhà giáo định dạng văn bản, chèn âm thanh, video, hình
+                        ành, liên kết. Để xem chức năng của một nút bất kỳ, nhà giáo chỉ việc đưa con trỏ chuột đến nút
+                        đó sẽ xuất hiện thông tin chức năng. Ví dụ nút <b>More font colors</b> sau:</p>
+                    <img src="img/built03.png" class="center">
+                    <p>Danh sách các nút và chức năng:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nút</th>
+                                <th>Chức năng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>More font colors</td>
+                                <td>Định dạng màu chữ</td>
+                            </tr>
+                            <tr>
+                                <td>Font size</td>
+                                <td>Định dạng kích cỡ chữ</td>
+                            </tr>
+                            <tr>
+                                <td>Paragraph styles</td>
+                                <td>Định dạng kiểu chữ (tiêu đề, văn bản)</td>
+                            </tr>
+                            <tr>
+                                <td>Bold [Ctrl + b]</td>
+                                <td>Định dạng in đậm chữ</td>
+                            </tr>
+                            <tr>
+                                <td>Italic [Ctrl + i]</td>
+                                <td>Định dạng in nghiêng chữ</td>
+                            </tr>
+                            <tr>
+                                <td>Unordered list</td>
+                                <td>Định dạng danh sách không thứ tự</td>
+                            </tr>
+                            <tr>
+                                <td>Ordered list</td>
+                                <td>Định dạng danh sách có thứ tự</td>
+                            </tr>
+                            <tr>
+                                <td>Link</td>
+                                <td>Tạo một liên kết</td>
+                            </tr>
+                            <tr>
+                                <td>Unlink</td>
+                                <td>Hủy liên kết</td>
+                            </tr>
+                            <tr>
+                                <td>Insert or edit image</td>
+                                <td>Chèn hay chỉnh sửa hình ảnh</td>
+                            </tr>
+                            <tr>
+                                <td>Insert or edit an audio/video file</td>
+                                <td>Chèn hay chỉnh sửa một tập tin âm thanh hay video</td>
+                            </tr>
+                            <tr>
+                                <td>Record audio</td>
+                                <td>Thâu âm thanh</td>
+                            </tr>
+                            <tr>
+                                <td>Record video</td>
+                                <td>Thâu hình và âm thanh</td>
+                            </tr>
+                            <tr>
+                                <td>Manage files</td>
+                                <td>Quản lý các tập tin</td>
+                            </tr>
+                            <tr>
+                                <td>Insert H5P</td>
+                                <td>Chèn tập tin H5P</td>
+                            </tr>
+                            <tr>
+                                <td>Underline [Ctrl + u]</td>
+                                <td>Gạch chân</td>
+                            </tr>
+                            <tr>
+                                <td>Strike through</td>
+                                <td>Gạch ngang chữ</td>
+                            </tr>
+                            <tr>
+                                <td>Subscript</td>
+                                <td>Định dạng chỉ số dưới</td>
+                            </tr>
+                            <tr>
+                                <td>Superscript</td>
+                                <td>Định dạng chỉ số trên</td>
+                            </tr>
+                            <tr>
+                                <td>Left align</td>
+                                <td>Định dạng căn lề trái</td>
+                            </tr>
+                            <tr>
+                                <td>Right align</td>
+                                <td>Định dạng căn lề phải</td>
+                            </tr>
+                            <tr>
+                                <td>Center</td>
+                                <td>Định dạng căn giữa</td>
+                            </tr>
+                            <tr>
+                                <td>Decrease Indent</td>
+                                <td>Thụt lề trái của đoạn văn bản về phía bên trái (thụt ra ngoài)</td>
+                            </tr>
+                            <tr>
+                                <td>Increase Indent</td>
+                                <td>Thụt lề trái của đoạn văn bản về phía bên phải (thụt vào trong)</td>
+                            </tr>
+                            <tr>
+                                <td>Insert character</td>
+                                <td>Chèn ký tự</td>
+                            </tr>
+                            <tr>
+                                <td>Table</td>
+                                <td>Chèn bảng</td>
+                            </tr>
+                            <tr>
+                                <td>Clear formatting</td>
+                                <td>Xóa định dạng</td>
+                            </tr>
+                            <tr>
+                                <td>Undo</td>
+                                <td>Hoàn tác thao tác đã thực hiện trước đó</td>
+                            </tr>
+                            <tr>
+                                <td>Redo</td>
+                                <td>Lặp lại thao tác vừa thực hiện</td>
+                            </tr>
+                            <tr>
+                                <td>Accessibility checker</td>
+                                <td>Kiểm tra và đảm bảo tính khả dụng của nội dung cho mọi người</td>
+                            </tr>
+                            <tr>
+                                <td>Screenreader helper</td>
+                                <td>Hỗ trợ người dùng sử dụng các phần mềm đọc màn hình khi truy cập vào các trang web
+                                    Moodle</td>
+                            </tr>
+                            <tr>
+                                <td>HTML</td>
+                                <td>Chèn mã HTML trực tiếp vào nội dung trang.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="content-html" class="content" style="display:none;">
+                    <p>Sử dụng ngôn ngữ HTML và CSS trong thiết kế nội dung trang bằng cách nhấn nút HTML. Giả sử trang
+                        nội dung chúng ta được tạo với các tính năng soạn thảo có sẵn có giao diện như sau:</p>
+                    <img src="img/html01.png" class="center">
+                    <p>Mở rộng các nút chức năng và nhấn nút HTML:</p>
+                    <img src="img/html02.png" class="center">
+                    <p>Nút <b>HTML</b> trong Moodle được sử dụng để chèn mã HTML trực tiếp vào nội dung của một trang
+                        hoặc phần
+                        tử trong hệ thống quản lý học tập này. Một số mục đích phổ biến của việc sử dụng nút HTML bao
+                        gồm:</p>
+                    <ul>
+                        <li>Tùy chỉnh nội dung: Cho phép người dùng tùy chỉnh nội dung trên các trang hoặc trong các
+                            phần của
+                            Moodle bằng cách sử dụng mã HTML. Điều này có thể bao gồm việc chèn hình ảnh, video, âm
+                            thanh, hoặc
+                            định dạng văn bản một cách cụ thể hơn.
+                        <li>Nhúng nội dung bên ngoài: Cho phép nhúng nội dung từ các nguồn bên ngoài vào Moodle bằng
+                            cách sử
+                            dụng mã HTML. Ví dụ, người dùng có thể nhúng video từ YouTube hoặc bài đăng từ blog của
+                            mình.
+                        <li>Tạo nội dung tương tác: HTML có thể được sử dụng để tạo ra các phần tử tương tác như biểu
+                            mẫu, nút
+                            nhấn, hoặc các hiệu ứng động để làm cho trải nghiệm học tập trên Moodle thêm phong phú và
+                            thú vị.
+                        <li>Tùy chỉnh giao diện: HTML cũng có thể được sử dụng để tùy chỉnh giao diện của Moodle bằng
+                            cách
+                            thêm mã HTML vào các trang hoặc phần tử cụ thể, cho phép người dùng tạo ra trải nghiệm người
+                            dùng
+                            độc đáo và phù hợp với nhu cầu của họ.
+                    </ul>
+                    <p>Việc sử dụng mã HTML đòi hỏi kiến thức cơ bản về ngôn ngữ HTML và CSS. Nhà giáo có thể tham khảo
+                        video giới thiệu ngôn ngữ HTML:</p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/Klz2Xh29jL8?si=VmoTaGORcwxJ5JDK"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p>Video giới thiệu CSS:</p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/_oCwPdT14iQ?si=RhQJp1nbJRwCv7iJ"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" id="add">Thêm hoạt động / tài nguyên</button>
+            <button class="btn" id="cancel">Trang chủ</button>
+        </div>
+    </div>
+    <div id="sticky-note" class="sticky-note" style="display: none;">
+        <div id="note-content"></div>
+        <button class="close-note" onclick="closeStickyNote()">X</button>
+    </div>
+    <script src="script.js"></script>
+    <script src="chatbot/chatscript.js"></script>
+</body>
+
+</html>

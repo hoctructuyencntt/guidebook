@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+ .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+.modal {
+    max-width: 100%;
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.modal-header, .modal-footer {
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.activities {
+    flex: 1;
+    border-right: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    cursor: pointer;
+    background-color: #f5f5f5;
+    padding: 5px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+color:red;
+}
+
+.radio-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.activities ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activities li {
+    margin-bottom: 10px;
+}
+
+.activities label {
+    margin-left: 10px;
+}
+
+.description {
+    flex: 2;
+    padding-top: 10px;
+}
+
+.description .content {
+    display: none;
+}
+
+.description .content p {
+    margin: 0 0 10px;
+}
+
+.modal-footer {
+    text-align: right;
+    border-top: 1px solid #ccc;
+}
+
+.modal-footer .btn {
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#add {
+    background-color: #007bff;
+    color: white;
+}
+
+#cancel {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Responsive iframe */
+.description iframe {
+    width: 100%;
+    height: 315px;
+    max-width: 100%;
+    border: none;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 600px) {
+    .modal-body {
+        flex-direction: row;
+    }
+
+    .activities {
+        width: 30%;
+    }
+
+    .description {
+        width: 70%;
+        padding-left: 20px;
+    }
+}
+
+/* Sticky Note Styles */
+.sticky-note {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 200px;
+    padding: 15px;
+    background-color: #ffef96;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.sticky-note p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.sticky-note a {
+    color: blue;
+    text-decoration: underline;
+}
+
+.sticky-note ul {
+    padding-left: 20px;
+    margin: 5px 0;
+}
+
+.close-note {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+}
